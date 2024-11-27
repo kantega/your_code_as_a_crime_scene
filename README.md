@@ -6,6 +6,14 @@ Vi ønsker å tilby et verktøy for å angripe nye prosjekter.
 Sjekk ut repoet.
 * Steg 2: Kjør scriptet `setup.sh` for å installere Kantega Code Analyzer. Da kan du kjøre kommandoen `kca` fra et hvilket som helst repo du vil analysere.
 
+### Installasjon
+
+Krever at man er på linux/mac eller kjører i Windows Subsystem for Linux (WSL) eller Git Bash på Windows.
+```bash
+source setup.sh
+```
+
+
 ### Tilgjengelige kommandoer
 * `kca init` kjøres som første kommando i et nytt prosjekt. Den vil lage en gitlog-fil som brukes til videre analyse av prosjektet.
 
