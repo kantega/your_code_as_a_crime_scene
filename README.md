@@ -4,7 +4,7 @@ Vi ønsker å tilby et verktøy for å angripe nye prosjekter.
 
 * Steg 1:
 Sjekk ut repoet.
-* Steg 2: Kjør scriptet `setup.sh` for å installere Kantega Code Analyzer. Da kan du kjøre kommandoen `kca` fra et hvilket som helst repo du vil analysere.
+* Steg 2: Kjør scriptet `source setup.sh` for å installere Kantega Code Analyzer. Da kan du kjøre kommandoen `kca_init` fra et hvilket som helst repo du vil analysere.
 
 ### Installasjon
 
