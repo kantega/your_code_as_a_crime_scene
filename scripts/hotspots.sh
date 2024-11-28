@@ -25,6 +25,7 @@ else
 fi
 echo Steg 3 Slår sammen til hotspot fil
 # You can now use $PYTHON_CMD to run your Python scripts
+# TODO: read files to ignore from somewhere else 
 $PYTHON_CMD "$SCRIPT_DIR/../maat-scripts-python3/merge/merge_comp_freqs.py" "$KCA_DIR/revisions.csv" "$KCA_DIR/complexity.csv" | grep -v 'pom.xml|package-lock.json' | head | tee "$KCA_DIR/hotspots.csv"
 echo Steg 4 Genererer graf
 $PYTHON_CMD "$SCRIPT_DIR/plotting/hotspot_plot.py" "$KCA_DIR/hotspots.csv" "$KCA_DIR/hotspot_plot.png"
