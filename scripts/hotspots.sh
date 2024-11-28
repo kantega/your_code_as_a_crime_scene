@@ -9,8 +9,10 @@ echo Steg 1 Genererer revisions fil
 MAAT_CMD="java -jar $SCRIPT_DIR/../code-maat-1.0.4-standalone.jar"
 ${MAAT_CMD} -l $KCA_DIR/git_log.txt -c git2 -a revisions > $KCA_DIR/revisions.csv
 echo Steg 2 Genererer kompleksitet fil
-CLOC_CMD="perl $SCRIPT_DIR/../cloc.pl"
-${CLOC_CMD} ./ --unix --by-file --csv --quiet --report-file=$KCA_DIR/complexity.csv
+
+# CLOC_CMD="perl $SCRIPT_DIR/../cloc.pl"
+# ${CLOC_CMD} ./ --unix --by-file --csv --quiet --report-file=$KCA_DIR/complexity.csv
+"${SCRIPT_DIR}/../cloc.sh" > "$KCA_DIR/complexity.csv"
 
 
 # Check if python3 is available

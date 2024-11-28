@@ -12,8 +12,8 @@ to_entries
   | map(
 	.key as $lang
 	| .value.reports[]
-	| { "lang": $lang, "file": .name, "blank": .stats.blanks, "comment": .stats.comments, "code": .stats.code })
-  | ["lang","file","blank","comment","code"] as $cols
+	| { "language": $lang, "filename": .name, "blank": .stats.blanks, "comment": .stats.comments, "code": .stats.code })
+  | ["language","filename","blank","comment","code"] as $cols
   | map(. as $row | $cols | map($row[.])) as $rows
   | $cols, $rows[]
   | @csv' -r
