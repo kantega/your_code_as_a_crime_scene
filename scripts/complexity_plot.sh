@@ -22,6 +22,9 @@ python "$kca_path/../maat-scripts-python3/miner/git_complexity_trend.py" --file 
 echo "2. generer plot fra complexity_trend csv"
 read
 
+png_file="${csv_file}.png"
+
+python "$kca_path/plotting/complexity_plot.py" "$csv_file" "$png_file"
 
 echo "3. vis hvor plot ligger"
-read
+echo "$png_file"
