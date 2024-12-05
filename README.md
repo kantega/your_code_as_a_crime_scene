@@ -19,7 +19,5 @@ source setup.sh
 
 * `kca_hotspots` gir deg en liste over aktuelle **hotspots** i koden din. Hotspots er filer som er mye endret over tid.
 
-* `kca_coupling` gir deg en oversikt over hvilke klasser/filer/moduler som henger tett sammen. Denne analysen baserer seg på hvilke deler av repoet som endrer seg samtidig.
-
 * `kca_complexity` gir deg en oversikt over hvilke filer som har stor grad av kompleksitet, sammen med en oversikt over hvilke filer som endres mye.
 
