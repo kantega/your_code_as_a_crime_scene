@@ -1,6 +1,12 @@
 #!/usr/bin/env bash
 
 logfile=".kca/git_log.txt"
+
+if [ ! -e "$logfile" ]
+then
+    echo "Du mangler en git log. Du må kjøre kca_init"
+    exit 1
+fi
 echo "0. antar at man har kjørt kca_init og revisions analyse for å finne en fil å se på"
 
 valgt_fil=$1

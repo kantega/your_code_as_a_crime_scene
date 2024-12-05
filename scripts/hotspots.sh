@@ -1,7 +1,13 @@
-#!/usr/bin/bash 
+#!/usr/bin/bash
 
 REPO_DIR=$(git rev-parse --show-toplevel)
 KCA_DIR="$REPO_DIR/.kca"
+
+if [ ! -e "$KCA_DIR/git_log.txt" ]
+then
+    echo "Du mangler en git log. Du må kjøre kca_init"
+    exit 1
+fi
 
 SCRIPT_DIR=$(dirname -- "$0";)
 
