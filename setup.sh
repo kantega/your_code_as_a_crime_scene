@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 
 echo lag .bashrc fil på brukerens hjemmappe
 echo den filen må inneholde kca alias

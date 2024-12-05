@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 
 REPO_DIR=$(git rev-parse --show-toplevel)
 KCA_DIR="$REPO_DIR/.kca"

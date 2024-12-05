@@ -1,4 +1,4 @@
-#!/usr/bin/bash 
+#!/usr/bin/env bash
 
 echo Steg 1: git exclude .kca mappen
 mkdir .kca
