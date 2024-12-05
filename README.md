@@ -13,6 +13,26 @@ Krever at man er på linux/mac eller kjører i Windows Subsystem for Linux (WSL)
 source setup.sh
 ```
 
+Use docker to run the code analyzer.
+
+```bash
+docker build -t kca .
+docker run -it kca
+```
+
+Alternatively, you can install the code analyzer locally.
+
+You need to have python and pandas installed.
+
+```bash
+# Create a virtual environment
+python3 -m venv venv
+source venv/bin/activate
+pip install pandas
+```
+
+
+
 
 ### Tilgjengelige kommandoer
 * `kca_init` kjøres som første kommando i et nytt prosjekt. Den vil lage en gitlog-fil som brukes til videre analyse av prosjektet.
