@@ -15,9 +15,9 @@ source setup.sh
 
 
 ### Tilgjengelige kommandoer
-* `kca init` kjøres som første kommando i et nytt prosjekt. Den vil lage en gitlog-fil som brukes til videre analyse av prosjektet.
+* `kca_init` kjøres som første kommando i et nytt prosjekt. Den vil lage en gitlog-fil som brukes til videre analyse av prosjektet.
 
-* `kca hotspots` gir deg en liste over aktuelle **hotspots** i koden din. Hotspots er filer som er mye endret over tid.
+* `kca_hotspots` gir deg en liste over aktuelle **hotspots** i koden din. Hotspots er filer som er mye endret over tid.
 
-* `kca coupling` gir deg en oversikt over hvilke klasser/filer/moduler som henger tett sammen. Denne analysen baserer seg på hvilke deler av repoet som endrer seg samtidig.
+* `kca_coupling` gir deg en oversikt over hvilke klasser/filer/moduler som henger tett sammen. Denne analysen baserer seg på hvilke deler av repoet som endrer seg samtidig.
 
