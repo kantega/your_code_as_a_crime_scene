@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
-logfile=".kca/git_log.txt"
+REPO_DIR=$(git rev-parse --show-toplevel)
+KCA_DIR="$REPO_DIR/.kca"
+logfile="$KCA_DIR/git_log.txt"
 
 if [ ! -e "$logfile" ]
 then

@@ -2,8 +2,9 @@
 
 REPO_DIR=$(git rev-parse --show-toplevel)
 KCA_DIR="$REPO_DIR/.kca"
+logfile="$KCA_DIR/git_log.txt"
 
-if [ ! -e "$KCA_DIR/git_log.txt" ]
+if [ ! -e "$logfile" ]
 then
     echo "Du mangler en git log. Du må kjøre kca_init"
     exit 1
