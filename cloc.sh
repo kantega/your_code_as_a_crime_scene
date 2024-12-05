@@ -2,8 +2,21 @@
 
 SCRIPT_DIR=$(dirname -- "$0";)
 
-TOKEI="${SCRIPT_DIR}/bin/tokei"
-JQ="${SCRIPT_DIR}/bin/jq"
+PLATFORM=$("${SCRIPT_DIR}/detect_platform.sh" || exit 1)
+
+if [[ "$PLATFORM" == "nix" ]]; then
+    TOKEI="${SCRIPT_DIR}/bin/nix/tokei"
+    JQ="${SCRIPT_DIR}/bin/nix/jq"
+elif [[ "$OSTYPE" == "win" ]]; then
+    TOKEI="${SCRIPT_DIR}/bin/win/tokei.exe"
+    JQ="${SCRIPT_DIR}/bin/win/jq.exe"
+elif [[ "$OSTYPE" == "mac" ]]; then
+    TOKEI="${SCRIPT_DIR}/bin/mac/tokei"
+    JQ="${SCRIPT_DIR}/bin/mac/jq"
+else
+    echo 'unknown OSTYPE: ' "$OSTYPE" ' cannot exec'
+    exit 1
+fi
 
 # count lines of code with tokei
 # reformat as csv with jq
