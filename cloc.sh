@@ -7,10 +7,10 @@ PLATFORM=$("${SCRIPT_DIR}/detect_platform.sh" || exit 1)
 if [[ "$PLATFORM" == "nix" ]]; then
     TOKEI="${SCRIPT_DIR}/bin/nix/tokei"
     JQ="${SCRIPT_DIR}/bin/nix/jq"
-elif [[ "$OSTYPE" == "win" ]]; then
+elif [[ "$PLATFORM" == "win" ]]; then
     TOKEI="${SCRIPT_DIR}/bin/win/tokei.exe"
     JQ="${SCRIPT_DIR}/bin/win/jq.exe"
-elif [[ "$OSTYPE" == "mac" ]]; then
+elif [[ "$PLATFORM" == "mac" ]]; then
     TOKEI="${SCRIPT_DIR}/bin/mac/tokei"
     JQ="${SCRIPT_DIR}/bin/mac/jq"
 else
