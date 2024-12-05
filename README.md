@@ -1,10 +1,13 @@
 # Kantega Code Analyzer
 
-Vi ønsker å tilby et verktøy for å angripe nye prosjekter.
+## OBS: Dette er et eksperimentelt verktøy og er under utvikling. Vennligst lag en issue eller kontakt oss om du har spørsmål eller tilbakemeldinger.
+
+Her er et verktøy for å hjelpe deg å angripe et eksisterende prosjekt når du er ny i prosjektet.
 
 * Steg 1:
 Sjekk ut repoet.
 * Steg 2: Kjør scriptet `source setup.sh` for å installere Kantega Code Analyzer. Da kan du kjøre kommandoen `kca_init` fra et hvilket som helst repo du vil analysere.
+* Steg 3: Kjør `kca_hotspots` for å finne ut hvilke filer som endres ofte.
 
 ### Installasjon
 
@@ -13,22 +16,22 @@ Krever at man er på linux/mac eller kjører i Windows Subsystem for Linux (WSL)
 source setup.sh
 ```
 
-Use docker to run the code analyzer.
+Du må ha python og pandas installert.
+
+```bash
+python3 -m venv venv
+source venv/bin/activate
+pip install pandas
+pip install matplotlib
+```
+
+#### Docker
+
+Hvis du ikke har lyst til å installere noe lokalt kan du kjøre kca i Docker.
 
 ```bash
 docker build -t kca .
 docker run -it kca
-```
-
-Alternatively, you can install the code analyzer locally.
-
-You need to have python and pandas installed.
-
-```bash
-# Create a virtual environment
-python3 -m venv venv
-source venv/bin/activate
-pip install pandas
 ```
 
 
