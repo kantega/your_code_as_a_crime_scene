@@ -44,3 +44,18 @@ docker run -it kca
 
 * `kca_complexity` gir deg en oversikt over hvilke filer som har stor grad av kompleksitet, sammen med en oversikt over hvilke filer som endres mye.
 
+### Hva sier dataen?
+
+Verktøyet er basert på boken Your Code As A Crime Scene av Adam Tornhill, som vi i Backend Boklubb leste høsten 2024. Poenget med boken er å ta i bruk informasjon
+utenom selve koden for å si noe om helsen til et koderepo. Her inneholder Git uvurderlig informasjon. 
+
+#### Hotspots
+Hotspots er komplekse filer som er endret mye. I boken argumenteres det for at disse filene er filene man burde starte med dersom man skal gjøre en refactoring av en applikasjon. 
+Hotspots-analysen er også praktisk om man er ny på et team, ettersom den forteller hvilke filer det er lurt å sette seg inn i først. Hotspotanalysen bruker prosjektets git log for å
+finne ut hvor ofte en fil endres. Kompleksitet er beregnet basert på antall linjer i en fil, dette kan virke snodig, men forfatteren av boken argumenterer med at antall linjer i en fil 
+er et like bra (eller like dårlig) tall på kompleksitet, som andre populære målestokker som syklomatisk kompleksitet. Disse to filene for kompleksitet og revisjoner slås så sammen til en
+hotspot-analyse. 
+
+#### Complexity
+Kompleksitetsgrafen viser en enkelt fil, og hvordan den har endret seg i kompleksitet over tid. Her brukes antall innrykk som kompleksitetsfaktor, som forfatteren av boken også argumenterte for
+var en god metrikk. Grafen bør kunne gjøre det tydelig når det ble innført kompleksitet, i tillegg til når det ble gjort refactoring for å få ned kompleksiteten. 
